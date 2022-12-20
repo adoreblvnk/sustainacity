@@ -926,7 +926,7 @@
         "roughnessFactor": 0.5,
         "baseColorFactor": [0.254901975, 1, 0.254901975, 1]
       },
-      "emissiveFactor": [0.509803951, 10, 0.509803951]
+      "emissiveFactor": [0.509803951, 2, 0.509803951]
     }
   ],
   "nodes": [
