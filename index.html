@@ -644,7 +644,7 @@
 		}
 
 		// main function
-		AFRAME.registerComponent('mytarget', {
+		AFRAME.registerComponent('carbonfootprint', {
 			init: function () {
 				this.el.addEventListener('targetFound', event => {
 					console.log("target found");
@@ -857,16 +857,16 @@
 		</div>
 
 		<a-scene
-			mindar-image="imageTargetSrc: ./assets/detect/tree.mind; showStats: false; uiScanning: #example-scanning-overlay;"
+			mindar-image="imageTargetSrc: ./assets/detect/targets.mind; showStats: false; uiScanning: #example-scanning-overlay;"
 			embedded="" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights"
 			vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false" inspector=""
 			keyboard-shortcuts="" screenshot="">
 
-			<a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;"
-				raycaster="far: 10000; objects: .clickable" camera="" rotation="" wasd-controls="">
+			<a-camera
+				position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: 10000; objects: .clickable" camera="" rotation="" wasd-controls="">
 			</a-camera>
 
-			<a-entity id="mytarget" mytarget="" mindar-image-target="targetIndex: 0">
+			<a-entity carbonfootprint="" mindar-image-target="targetIndex: 0">
 				<!-- display base image-->
 				<!-- <a-plane src="./assets/tree_icon.png" position="0 0 0" height="0.552" width="1" rotation="0 0 0" material=""
 					geometry=""></a-plane> -->
@@ -897,8 +897,10 @@
 				</a-entity>
 
 				<!-- display AR model -->
-				<a-gltf-model id="avatar" rotation="0 0 0" position="0 -0.25 0" scale="0.02 0.02 0.02"
-					src="./assets/Tree.gltf" gltf-model=""></a-gltf-model>
+				<a-gltf-model
+				  id="avatar" rotation="0 0 0" position="0 -0.25 0" scale="0.02 0.02 0.02"
+				  src="./assets/Tree.gltf" gltf-model="">
+				</a-gltf-model>
 
 				<!-- display bottom text -->
 				<a-text id="text" class="clickable" value="" color="black" align="center" width="2" position="0 -0.5 0"
@@ -918,6 +920,14 @@
 				  animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
 				  material="" geometry="">
 				</a-image>
+			</a-entity>
+
+			<a-entity mytarget="" mindar-image-target="targetIndex: 3">
+				<!-- display AR model -->
+				<a-gltf-model
+				  id="avatar" rotation="0 0 0" position="0 -0.25 0" scale="0.02 0.02 0.02"
+				  src="./assets/ShoppingBag.gltf" gltf-model="">
+				</a-gltf-model>
 			</a-entity>
 
 			<canvas
