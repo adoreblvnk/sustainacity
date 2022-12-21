@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AR | SustainaCity</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+<link href="https://fonts.googleapis.com/css?family=Zen Dots" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Strait" type="text/css" rel="stylesheet">
+	<link rel="icon" type="image/png" href="./images/favicon.png"/>
+    <style>
+
+        * {
+        text-align: center;
+        position: relative;
+        user-select: none;
+        background-color:white;
+        }
+
+        h2 {
+        font-size:4vw;
+        }
+
+        h1 {
+        margin-top: 5%;
+        font-size:12vw;
+        }
+
+        button {
+          margin-top:5vh;
+          font-size:4vh;
+            font-family: 'Zen Dots';
+            border-width: thick;
+            border-style: solid;
+            border-color: black;
+            
+        }
+
+        button:hover{
+          font-size: 5vh;
+            background: linear-gradient(120deg,white 69%, #8BF422);
+        }
+      
+.preloader {
+  position: fixed;
+  background-color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index:99;
+  animation: preload 3.5s;
+}
+.preloader img {
+    margin-top:20vh;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@keyframes preload {
+
+      0% {opacity:100%;}
+      60% {opacity:100%;}
+    100% {opacity:0%;}
+}
+        
+        #restofstuff  {
+            height:97vh;
+            background-image: url(Images/Poster%20No%20Text.png);
+            background-repeat:no-repeat;
+            background-position: bottom;
+            
+        }
+        
+@media only screen and (max-width: 991px) {
+            #restofstuff{
+                height:98vh;}
+}
+        
+
+.modal-wrapper {
+   position: fixed;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+
+   background: rgba(0, 0, 0, 0.8);
+   z-index: -1;
+   opacity: 0;
+
+   -webkit-transition: opacity 0.2s ease-in;
+   -moz-transition: opacity 0.2s ease-in;
+   transition: opacity 0.2s ease-in;
+
+   pointer-events: auto;
+}
+
+.modal-wrapper > div {
+   width: 500px;
+   height: 80vh;
+   position: absolute;
+
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+
+   margin: auto;
+
+   vertical-align: middle;
+   padding: 20px;
+   border-radius: 6px;
+   background: #fff;
+   z-index: 1;
+    
+}
+
+.close {
+   background: #606061;
+   line-height: 48px;
+   position: absolute;
+   right: -12px;
+   text-align: center;
+   top: -10px;
+   width: 48px;
+   text-decoration: none;
+   font-weight: bold;
+   border-radius: 24px;
+}
+
+        .close:hover{
+            
+            filter:brightness(2);
+        }
+    </style>
+</head>
+<body>
+    
+    
+ <div class='preloader' id="preloader1"> <img  src="./images/Studio Logo.png" alt="BOSCO / blvnk presents"> </div>
+
+
+ <div class='preloader' style='z-index:90;display:none' id="preloader2"> <img  src="./images/NYPDBS.png" alt="Supported by NYP/DBS"> </div>
+
+    <div id='restofstuff' style='display:none;'>
+<img src='./Images/Tree%20Icon%20Animated.gif' style='height:20vh;margin-top:5vh'><br>
+        <img src='./Images/SustainaCity%20Text%20Logo.png' style='max-width:80vw;max-height:40vh'>
+        <br>
+    <button type="button" onclick='document.location.href="/demo.html"'>Start</button>
+        <br>
+       <button type="button" class="modal-toggle" data-target="openModal1">About</button> 
+        
+        
+        
+        
+        <div id="openModal1" class="modal-wrapper">
+   <div class="modal">
+      <a href="#close" title="Close" class="close"><i style='background:#606061;color:white;' class="fa-solid fa-xmark"></i></a>
+      <div class="modal-header" style='font-family: "Zen Dots"'>
+         <h2>About</h2>
+          
+          
+      </div>
+      <div class="modal-content"  style='font-family: "Strait";font-size:1.5em;'>
+        <p>Welcome to SustainaCity!</p>
+<p>Here, everyone&nbsp;embraces the values of sustainability, and is committed to&nbsp;protecting our natural environment.</p>
+<p>Feel free to explore the town using in immersive AR. You'll find lots of tips on how you, too,&nbsp;do your part.</p>
+<p><i style='color:black;' class="fa-brands fa-twitter"></i> Once you're done, tell your friends about&nbsp;your trip to SustainaCity using our Twitter function.</p>
+      <button type="button" onclick='document.location.href="/demo.html"'>Start</button>
+       </div>
+       
+   </div>
+</div>
+
+    </div>
+    
+    
+    
+    
+    
+    
+<script>
+    
+var x = 7000;
+setTimeout(function () {
+    document.getElementById('preloader1').remove();
+    document.getElementById('preloader2').style.display='block';
+}, x/2)
+    
+ setTimeout(function () {
+    document.getElementById('preloader2').remove();
+     document.getElementById('restofstuff').style.display='block';
+}, x)
+       var cb = document.querySelectorAll(".close");
+for (i = 0; i < cb.length; i++) {
+   cb[i].addEventListener("click", function() {
+      var dia = this.parentNode.parentNode; /* You need to update this part if you change level of close button */
+      dia.style.opacity = 0;
+      dia.style.zIndex = -1;
+   });
+}
+
+var mt = document.querySelectorAll(".modal-toggle");
+for (i = 0; i < mt.length; i++) {
+   mt[i].addEventListener("click", function() {
+      var targetId = this.getAttribute("data-target");
+      var target = document.getElementById(targetId);
+      target.style.opacity = 1;
+      target.style.zIndex = 9999;
+   });
+}
+    
+    
+</script>
+</body>
+</html>
