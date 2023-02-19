@@ -31,17 +31,17 @@ prod by blvnk & [Mark Bosco](https://github.com/MarkB-NYP).
 
 **Scenes**
 
-<img src="assets/demo/sustainacity_logo.gif" width=750>
+<img src="assets/demo/sustainacity_logo.gif" width=400>
 
-<img src="assets/demo/shopping.gif" width=750>
+<img src="assets/demo/shopping.gif" width=400>
 
-<img src="assets/demo/renovations.gif" width=750>
+<img src="assets/demo/renovations.gif" width=400>
 
-<img src="assets/demo/ev.gif" width=750>
+<img src="assets/demo/ev.gif" width=400>
 
-<img src="assets/demo/carbon_footprint.gif" width=750>
+<img src="assets/demo/carbon_footprint.gif" width=400>
 
-<img src="assets/demo/clean_energy.gif" width=750>
+<img src="assets/demo/clean_energy.gif" width=400>
 
 The whereabouts of the exact location on the poster for each scene is left for you to find out, although they can be found inside this repository under `assets/detect/`.
 
