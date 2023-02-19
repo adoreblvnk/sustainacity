@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="./images/Tree%20Icon%20Animated.gif" width=100> <!-- Logo -->
+    <img src="./Images/Tree Icon Animated.gif" width=100> <!-- Logo -->
     <h1>Sustainacity</h1> <!-- Title -->
     <p>
       AR (Augmented Reality) enhanced web app to showcase DBS' sustainability initiative.
