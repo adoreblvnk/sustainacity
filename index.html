@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <title>AR | SustainaCity</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    
-    
+
 <link href="https://fonts.googleapis.com/css?family=Zen Dots" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Strait" type="text/css" rel="stylesheet">
 	<link rel="icon" type="image/png" href="./images/favicon.png"/>
@@ -35,14 +33,14 @@
             border-width: thick;
             border-style: solid;
             border-color: black;
-            
+
         }
 
         button:hover{
           font-size: 5vh;
             background: linear-gradient(120deg,white 69%, #8BF422);
         }
-      
+
 .preloader {
   position: fixed;
   background-color: white;
@@ -65,20 +63,19 @@
       60% {opacity:100%;}
     100% {opacity:0%;}
 }
-        
+
         #restofstuff  {
             height:97vh;
             background-image: url(Images/Poster%20No%20Text.png);
             background-repeat:no-repeat;
             background-position: bottom;
-            
+
         }
-        
+
 @media only screen and (max-width: 991px) {
             #restofstuff{
                 height:98vh;}
 }
-        
 
 .modal-wrapper {
    position: fixed;
@@ -115,7 +112,7 @@
    border-radius: 6px;
    background: #fff;
    z-index: 1;
-    
+
 }
 
 .close {
@@ -132,14 +129,13 @@
 }
 
         .close:hover{
-            
+
             filter:brightness(2);
         }
     </style>
 </head>
 <body>
-    
-    
+
  <div class='preloader' id="preloader1"> <img  src="./Images/Studio Logo.png" alt="BOSCO / blvnk presents"> </div>
 
 
@@ -151,18 +147,14 @@
         <br>
     <button type="button" onclick='document.location.href="./demo.html"'>Start</button>
         <br>
-       <button type="button" class="modal-toggle" data-target="openModal1">About</button> 
-        
-        
-        
-        
+       <button type="button" class="modal-toggle" data-target="openModal1">About</button>
+
         <div id="openModal1" class="modal-wrapper">
    <div class="modal">
       <a href="#close" title="Close" class="close"><i style='background:#606061;color:white;' class="fa-solid fa-xmark"></i></a>
       <div class="modal-header" style='font-family: "Zen Dots"'>
          <h2>About</h2>
-          
-          
+
       </div>
       <div class="modal-content"  style='font-family: "Strait";font-size:1.5em;'>
         <p>Welcome to SustainaCity!</p>
@@ -171,25 +163,20 @@
 <p><i style='color:black;' class="fa-brands fa-twitter"></i> Once you're done, tell your friends about&nbsp;your trip to SustainaCity using our Twitter function.</p>
       <button type="button" onclick='document.location.href="./demo.html"'>Start</button>
        </div>
-       
+
    </div>
 </div>
 
     </div>
-    
-    
-    
-    
-    
-    
+
 <script>
-    
+
 var x = 7000;
 setTimeout(function () {
     document.getElementById('preloader1').remove();
     document.getElementById('preloader2').style.display='block';
 }, x/2)
-    
+
  setTimeout(function () {
     document.getElementById('preloader2').remove();
      document.getElementById('restofstuff').style.display='block';
@@ -212,8 +199,7 @@ for (i = 0; i < mt.length; i++) {
       target.style.zIndex = 9999;
    });
 }
-    
-    
+
 </script>
 </body>
 </html>
